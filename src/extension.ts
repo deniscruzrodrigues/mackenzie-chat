@@ -7,7 +7,7 @@ import * as path from 'path';
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 	//Registra o comando para abrir o chat
-	let disposable = vscode.commands.registerCommand('mackenzie-chat.openChat', () => {
+	let disposable = vscode.commands.registerCommand('codeAnalyzer.openChat', () => {
 		ChatPanel.createOrShow(context.extensionUri);
 	});
 
@@ -65,7 +65,7 @@ class ChatViewProvider implements vscode.WebviewViewProvider {
 		<html lang="pt-BR">
 		<head>
 			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initialscale=1.0">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<link href="${styleUri}" rel="stylesheet">
 			<title>Analisador de Código</title>
 		</head>
@@ -105,8 +105,7 @@ class ChatViewProvider implements vscode.WebviewViewProvider {
 
 		try {
 			//Chama o servidor MCP para analisar o código
-			const result = await this._callMcpTool
-			('codeAnalyzer', 'analyze_code', {
+			const result = await this._callMcpTool ('codeAnalyzer', 'analyze_code', {
 				file_path: filePath
 			});
 
