@@ -2,7 +2,7 @@
     //Elementos do DOM
 
     const vscode = acquireVsCodeApi();
-    const chatMessages = document.getElementById('chat-mesages');
+    const chatMessages = document.getElementById('chat-messages');
     const chatInput = document.getElementById('chat-input');
     const sendButton = document.getElementById('send-button');
     const analyzeButton = document.getElementById('analyze-button');
@@ -10,16 +10,17 @@
     const explainButton = document.getElementById('explain-button');
 
     //Adiciona mensagem ao chat
-    function sendMessage() {
+    function addMessage(content, isUser = false) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${isUser ? 'user' : 'system'}`;
         messageDiv.textContent = content;
         chatMessages.appendChild(messageDiv);
-        chatMessages.scrollTop  chatMessages.scrollHeight;
+        chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
     //Envia mensagem para a extensão
     function sendMessage() {
+        const message = chatInput.value.trim();
         if (message) {
             addMessage(message, true);
             vscode.postMessage({ type : 'message', content: message });
