@@ -46,7 +46,8 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "debug": "node --inspect-brk=9229 ./node_modules/webpack/bin/webpack.js"
   },
   "devDependencies": {
     "@types/vscode": "^1.99.0",
