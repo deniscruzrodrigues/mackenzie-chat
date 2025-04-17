@@ -6,8 +6,9 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Run Extension",
+			"name": "Run mackenzie-chat Extension",
 			"type": "extensionHost",
+			"preLaunchTask": "Debug",
 			"request": "launch",
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}"
@@ -15,7 +16,20 @@
 			"outFiles": [
 				"${workspaceFolder}/dist/**/*.js"
 			],
-			"preLaunchTask": "${defaultBuildTask}"
-		}
-	]
+			"postDebugTask": "Clean",
+		},
+
+//		{
+//			"name": "Run Extension",
+//			"type": "extensionHost",
+//			"request": "launch",
+//			"args": [
+//				"--extensionDevelopmentPath=${workspaceFolder}"
+//			],
+//			"outFiles": [
+//				"${workspaceFolder}/dist/**/*.js"
+//			],
+//			"preLaunchTask": "${defaultBuildTask}"
+//		}
+	]	
 }
