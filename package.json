@@ -2,7 +2,7 @@
   "name": "mackenzie-chat",
   "displayName": "Mackenzie Chat",
   "description": "Analisador de código",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "decruro",
   "engines": {
     "vscode": "^1.99.0"
@@ -26,7 +26,7 @@
       "activitybar": [
         {
           "id": "code-analyzer",
-          "icon": "resources/icon.svg",
+          "icon": "resources/icon.png",
           "title": "Code Analyzer"
         }
       ]

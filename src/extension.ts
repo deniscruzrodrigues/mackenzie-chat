@@ -14,12 +14,10 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(disposable);
 
 	//Registra o provedor de visualização do chat
-	if (vscode.window.registerWebviewViewProvider) {
-		const provider = new ChatViewProvider(context.extensionUri);
-		context.subscriptions.push(
-			vscode.window.registerWebviewViewProvider('mackenzieChat',provider)
+	const provider = new ChatViewProvider(context.extensionUri);
+	context.subscriptions.push(
+		vscode.window.registerWebviewViewProvider('mackenzieChat',provider)
 		);
-	}
 }
 
 class ChatViewProvider implements vscode.WebviewViewProvider {
