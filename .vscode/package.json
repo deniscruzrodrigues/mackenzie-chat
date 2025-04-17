@@ -1,15 +1,19 @@
 {
   "name": "mackenzie-chat",
-  "displayName": "mackenzie-chat",
-  "description": "laboratorio AI",
+  "displayName": "Mackenzie Chat",
+  "description": "Analisador de código",
   "version": "0.0.1",
+  "publisher": "decruro",
   "engines": {
     "vscode": "^1.99.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onView:mackenzieChat",
+    "onCommand:codeAnalyzer.openChat"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -62,5 +66,10 @@
     "webpack-cli": "^6.0.1",
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deniscruzrodrigues/mackenzie-chat"
+  },
+  "license": "MIT"
 }
