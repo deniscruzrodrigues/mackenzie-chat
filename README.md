@@ -9,3 +9,6 @@ Sugestões de melhoria
 Explicação de código
 
 ![Mackenzie Chat](resources/icon.png)
+
+## Licença
+Este produto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes
